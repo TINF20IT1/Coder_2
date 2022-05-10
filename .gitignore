@@ -9,6 +9,7 @@
 /linux.x86_64
 /linux_Data
 /Assets/Samples/
+/Assets/Samples.meta
 **/.idea/**
 Library
 obj
