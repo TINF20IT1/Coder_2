@@ -3,18 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+
+
 public class Generator : MonoBehaviour
 {
     public Tilemap tileMap;
+    public TileBase tile, debug;
+
     public float seed;
-    public int height = 100, width = 500, xOffset = 20, yOffset = 10;
-    public TileBase tile;
+
+    Vector3Int cellPos, prevCellPos = new Vector3Int(-100, -100, -100);
+
+    int offsetX, offsetY;
 
     // Start is called before the first frame update
     void Start()
     {
         int newPoint;
+
+        int height = (
+            tileMap.WorldToCell(camGetUpperLeft()) - 
+            tileMap.WorldToCell(camGetLowerLeft())
+        ).y;
+
+        int width = (
+            tileMap.WorldToCell(camGetLowerRight()) -
+            tileMap.WorldToCell(camGetLowerLeft())
+        ).x * 2;
+        offsetX = tileMap.WorldToCell(camGetLowerLeft()).x;
+        offsetY = tileMap.WorldToCell(camGetLowerLeft()).y;
+
+        Debug.Log($"h: {height}+{offsetY} w: {width}+{offsetX}");
+
         var map = GenerateArray(width, height, true);
+
         for (int x = 0; x < map.GetUpperBound(0); x++)
         {
             var input = x * 0.1f;
@@ -34,7 +56,21 @@ public class Generator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var camPos = Camera.main.transform.position;
 
+        camPos.x += Screen.width;
+        camPos.y += Screen.height;
+
+        camPos = Camera.main.ScreenToWorldPoint(camPos);
+
+        cellPos = tileMap.WorldToCell(new Vector3(camPos.x, camPos.y, 0));
+
+        if (cellPos != prevCellPos)
+        {
+            prevCellPos = cellPos;
+            Debug.Log("" + camPos + ' ' + cellPos);
+            tileMap.SetTile(cellPos, debug);
+        }
     }
 
     public int[,] GenerateArray(int width, int height, bool empty)
@@ -52,7 +88,7 @@ public class Generator : MonoBehaviour
         for (int x = 0; x < map.GetUpperBound(0); x++)
             for (int y = 0; y < map.GetUpperBound(1); y++)
                 if (map[x, y] == 1)
-                    tilemap.SetTile(new Vector3Int(x - xOffset, y - yOffset, 0), tile);
+                    tilemap.SetTile(new Vector3Int(x + offsetX, y + offsetY, 0), tile);
     }
 
     public void UpdateMap(int[,] map, Tilemap tilemap)
@@ -60,8 +96,22 @@ public class Generator : MonoBehaviour
         for (int x = 0; x < map.GetUpperBound(0); x++)
             for (int y = 0; y < map.GetUpperBound(1); y++)
                 if (map[x, y] == 0)
-                    tilemap.SetTile(new Vector3Int(x - xOffset , y - yOffset, 0), null);
+                    tilemap.SetTile(new Vector3Int(x + offsetX, y + offsetY, 0), null);
     }
 
+    public Vector3 camGetHelper(Camera camera, float x, float y)
+    {
+        var camPos = Camera.main.transform.position;
+
+        camPos.x += x * Screen.width;
+        camPos.y += y * Screen.height;
+
+        return Camera.main.ScreenToWorldPoint(camPos);
+    }
+
+    public Vector3 camGetLowerLeft() => camGetHelper(Camera.main, 0, 0);
+    public Vector3 camGetUpperLeft() => camGetHelper(Camera.main, 0, 1);
+    public Vector3 camGetLowerRight() => camGetHelper(Camera.main, 1, 0);
+    public Vector3 camGetUpperRight() => camGetHelper(Camera.main, 1, 1);
 
 }
