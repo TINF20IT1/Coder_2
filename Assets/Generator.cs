@@ -3,55 +3,84 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-
-
 public class Generator : MonoBehaviour
 {
     public Tilemap tileMap;
-    public TileBase tile, debug;
+    public TileBase tile, debug, interactable;
 
     public float seed;
+     
+    Vector3Int cellPos, nextCellPos = new Vector3Int(-100, -100, -100);
+    Vector2Int offset;
 
-    Vector3Int cellPos, prevCellPos = new Vector3Int(-100, -100, -100);
-
-    int offsetX, offsetY;
+    int width, height;
+    GridMap map;
 
     // Start is called before the first frame update
     void Start()
     {
-        int newPoint;
+        {
+            var prefab = Resources.Load("TerrainPalette");
+            Debug.Log(prefab.GetType());
+        }
 
-        int height = (
+        // Remove static tilemap
+        tileMap.ClearAllTiles();
+
+        height = (
             tileMap.WorldToCell(camGetUpperLeft()) - 
             tileMap.WorldToCell(camGetLowerLeft())
-        ).y;
+        ).y * 3;
 
-        int width = (
+        width = (
             tileMap.WorldToCell(camGetLowerRight()) -
             tileMap.WorldToCell(camGetLowerLeft())
         ).x * 2;
-        offsetX = tileMap.WorldToCell(camGetLowerLeft()).x;
-        offsetY = tileMap.WorldToCell(camGetLowerLeft()).y;
 
-        Debug.Log($"h: {height}+{offsetY} w: {width}+{offsetX}");
+        nextCellPos = tileMap.WorldToCell(camGetUpperRight());
+        nextCellPos.x += width /2;
+        tileMap.SetTile(nextCellPos, debug);
 
-        var map = GenerateArray(width, height, true);
+        offset = (Vector2Int) tileMap.WorldToCell(camGetLowerLeft());
 
-        for (int x = 0; x < map.GetUpperBound(0); x++)
+        Debug.Log($"h: {height}+{offset.y} w: {width}+{offset.x}");
+
+        GridMap.MapMutator perlinGenerate = (map, offset) =>
         {
-            var input = x * 0.1f;
+                int newPoint;
+                for (int x = 0; x < map.GetUpperBound(0); x++)
+                {
+                    var input = x * 0.1f;
+                    //Debug.Log($"{Mathf.PerlinNoise(input, seed)} <- {x}, {seed}");
+                    newPoint = Mathf.FloorToInt((Mathf.PerlinNoise(input, seed)) * map.GetUpperBound(1));
+                    //Debug.Log(newPoint);
+                    newPoint /= 4;
+                    for (int y = newPoint; y >= 0; y--)
+                    {
+                        map[x, y] = 1;
+                    }
+                }
+                return map;
+        };
 
-            Debug.Log($"{Mathf.PerlinNoise(input, seed)} <- {x}, {seed}");
-            newPoint = Mathf.FloorToInt((Mathf.PerlinNoise(input, seed)) * map.GetUpperBound(1));
-            //Debug.Log(newPoint);
-            newPoint /= 4;
-            for (int y = newPoint; y >= 0; y--)
-            {
-                map[x, y] = 1;
-            }
-        }
-        RenderMap(map, tileMap, tile);
+        map = new GridMap(
+            width,
+            height,
+            true,
+            offset,
+            perlinGenerate
+        );
+
+        //var map = GenerateArray(width, height, true);
+
+        map.Render(tileMap, tile, offset);
+
+        tileMap.SetTile(new Vector3Int(3, 0, 0), interactable);
+
+        //RenderMap(map, tileMap, tile);
     }
+
+    
 
     // Update is called once per frame
     void Update()
@@ -63,16 +92,29 @@ public class Generator : MonoBehaviour
 
         camPos = Camera.main.ScreenToWorldPoint(camPos);
 
-        cellPos = tileMap.WorldToCell(new Vector3(camPos.x, camPos.y, 0));
+        cellPos = tileMap.WorldToCell((Vector2)camPos);
 
+        if (cellPos.x > nextCellPos.x - 1)
+        {
+            nextCellPos.x += width;
+            offset.x += width - 1;
+            map.UpdateRender(tileMap, tile, offset);
+            tileMap.SetTile(cellPos, debug);
+        }
+
+
+            /*
         if (cellPos != prevCellPos)
         {
             prevCellPos = cellPos;
-            Debug.Log("" + camPos + ' ' + cellPos);
+            //Debug.Log("" + camPos + ' ' + cellPos);
             tileMap.SetTile(cellPos, debug);
         }
-    }
+            */
 
+
+    }
+    /*
     public int[,] GenerateArray(int width, int height, bool empty)
     {
         int[,] array = new int[width, height];
@@ -80,8 +122,8 @@ public class Generator : MonoBehaviour
             for (int j = 0; j < height; j++)
                 array[i, j] = empty ? 0 : 1;
         return array;
-    }
-
+    }*/
+    /*
     public void RenderMap(int[,] map, Tilemap tilemap, TileBase tile)
     {
         tilemap.ClearAllTiles();
@@ -98,7 +140,7 @@ public class Generator : MonoBehaviour
                 if (map[x, y] == 0)
                     tilemap.SetTile(new Vector3Int(x + offsetX, y + offsetY, 0), null);
     }
-
+    */
     public Vector3 camGetHelper(Camera camera, float x, float y)
     {
         var camPos = Camera.main.transform.position;
@@ -113,5 +155,4 @@ public class Generator : MonoBehaviour
     public Vector3 camGetUpperLeft() => camGetHelper(Camera.main, 0, 1);
     public Vector3 camGetLowerRight() => camGetHelper(Camera.main, 1, 0);
     public Vector3 camGetUpperRight() => camGetHelper(Camera.main, 1, 1);
-
 }
