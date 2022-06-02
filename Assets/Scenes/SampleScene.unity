@@ -6823,7 +6823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c1eb7a4f578e448ba7b081b0665b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitSpeed: 0.0025
+  InitSpeed: 0.01
   Velocity: 1.1
 --- !u!20 &519420031
 Camera:
@@ -6892,8 +6892,8 @@ GameObject:
   m_Component:
   - component: {fileID: 909156884}
   - component: {fileID: 909156883}
-  - component: {fileID: 909156882}
   - component: {fileID: 909156881}
+  - component: {fileID: 909156882}
   - component: {fileID: 909156885}
   m_Layer: 0
   m_Name: Player
@@ -6922,9 +6922,9 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!58 &909156882
-CircleCollider2D:
+  m_Constraints: 4
+--- !u!61 &909156882
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6937,8 +6937,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!212 &909156883
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6999,7 +7009,7 @@ Transform:
   m_GameObject: {fileID: 909156880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.44, y: 7.04, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -7016,7 +7026,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5cd1c9709e96784a88edb8a33a0ae0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.5
+  movementSpeed: 5
+  jumpSpeed: 1
 --- !u!1 &956659711
 GameObject:
   m_ObjectHideFlags: 0
