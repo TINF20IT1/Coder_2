@@ -20,8 +20,7 @@ public class CameraMover : MonoBehaviour
     void Update()
     {
         var tmp = transform.position;
-        tmp.x += InitSpeed;
+        tmp.x += InitSpeed * Time.deltaTime;
         transform.position = tmp;
-        //InitSpeed *= Velocity;
     }
 }

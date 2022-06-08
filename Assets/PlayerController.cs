@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (horMovement != 0)
         {
-            rb.velocity = new Vector2(horMovement * movementSpeed, curVelocity.y);
+            rb.velocity = new Vector2(horMovement * movementSpeed * Time.deltaTime * 10, curVelocity.y);
         }    
     }
 }
