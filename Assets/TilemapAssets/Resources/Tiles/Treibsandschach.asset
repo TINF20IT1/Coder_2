@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e4e4fc705376343a3e65b25d94f0e2, type: 3}
+  m_Name: Treibsandschach
+  m_EditorClassIdentifier: 
+  m_Sprites:
+  - {fileID: -1017615542002167851, guid: 9ac37d803b9661a4ab3cfc17b4413de7, type: 3}
+  - {fileID: -8498014002193954364, guid: 9ac37d803b9661a4ab3cfc17b4413de7, type: 3}
+  - {fileID: 8906389068026349023, guid: 9ac37d803b9661a4ab3cfc17b4413de7, type: 3}
+  - {fileID: -3587130873647760045, guid: 9ac37d803b9661a4ab3cfc17b4413de7, type: 3}
+  - {fileID: 8418123489315004052, guid: 9ac37d803b9661a4ab3cfc17b4413de7, type: 3}
+  - {fileID: 3677108074074616894, guid: 9ac37d803b9661a4ab3cfc17b4413de7, type: 3}
+  - {fileID: 2949135535576342769, guid: 9ac37d803b9661a4ab3cfc17b4413de7, type: 3}
+  - {fileID: 755139199998397038, guid: 9ac37d803b9661a4ab3cfc17b4413de7, type: 3}
+  - {fileID: 5366365532055899689, guid: 9ac37d803b9661a4ab3cfc17b4413de7, type: 3}
+  - {fileID: 6293398851467581285, guid: 9ac37d803b9661a4ab3cfc17b4413de7, type: 3}
+  - {fileID: -6697836032905482091, guid: 9ac37d803b9661a4ab3cfc17b4413de7, type: 3}
+  - {fileID: 9039133573747752827, guid: 9ac37d803b9661a4ab3cfc17b4413de7, type: 3}
+  - {fileID: 338971931697714326, guid: 9ac37d803b9661a4ab3cfc17b4413de7, type: 3}
+  - {fileID: -1709300680024441709, guid: 9ac37d803b9661a4ab3cfc17b4413de7, type: 3}
+  - {fileID: -7652027202364743198, guid: 9ac37d803b9661a4ab3cfc17b4413de7, type: 3}

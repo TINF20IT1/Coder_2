@@ -1,52 +1,52 @@
 fileFormatVersion: 2
-guid: d0a35e891e270cd4f98073af9d0fc724
+guid: 9ac37d803b9661a4ab3cfc17b4413de7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9158004162373964887
-    second: steelSprite_0
+      213: -1017615542002167851
+    second: TreibsandSchach_0
   - first:
-      213: -7827401320344404354
-    second: steelSprite_1
+      213: -8498014002193954364
+    second: TreibsandSchach_1
   - first:
-      213: 8264513035114045789
-    second: steelSprite_2
+      213: 8906389068026349023
+    second: TreibsandSchach_2
   - first:
-      213: 1007778688567086435
-    second: steelSprite_3
+      213: -3587130873647760045
+    second: TreibsandSchach_3
   - first:
-      213: -2824801809765146785
-    second: steelSprite_4
+      213: 8418123489315004052
+    second: TreibsandSchach_4
   - first:
-      213: -4694945240818148660
-    second: steelSprite_5
+      213: 3677108074074616894
+    second: TreibsandSchach_5
   - first:
-      213: 4896426690097443060
-    second: steelSprite_6
+      213: 2949135535576342769
+    second: TreibsandSchach_6
   - first:
-      213: -6073817772635436322
-    second: steelSprite_7
+      213: 755139199998397038
+    second: TreibsandSchach_7
   - first:
-      213: -685309550965337494
-    second: steelSprite_8
+      213: 5366365532055899689
+    second: TreibsandSchach_8
   - first:
-      213: 3999942963582778864
-    second: steelSprite_9
+      213: 6293398851467581285
+    second: TreibsandSchach_9
   - first:
-      213: 2222055322138295689
-    second: steelSprite_10
+      213: -6697836032905482091
+    second: TreibsandSchach_10
   - first:
-      213: -4572468913621702019
-    second: steelSprite_11
+      213: 9039133573747752827
+    second: TreibsandSchach_11
   - first:
-      213: -1239832721684219918
-    second: steelSprite_12
+      213: 338971931697714326
+    second: TreibsandSchach_12
   - first:
-      213: -5309363640900089337
-    second: steelSprite_13
+      213: -1709300680024441709
+    second: TreibsandSchach_13
   - first:
-      213: -1951173685503563882
-    second: steelSprite_14
+      213: -7652027202364743198
+    second: TreibsandSchach_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: steelSprite_0
+      name: TreibsandSchach_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9aba62a4cbb38e080800000000000000
-      internalID: -9158004162373964887
+      spriteID: 5df4b0d5e04b0e1f0800000000000000
+      internalID: -1017615542002167851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_1
+      name: TreibsandSchach_1
       rect:
         serializedVersion: 2
         x: 16
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7eb27278fb7f5390800000000000000
-      internalID: -7827401320344404354
+      spriteID: 4c90fe61a4df01a80800000000000000
+      internalID: -8498014002193954364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_2
+      name: TreibsandSchach_2
       rect:
         serializedVersion: 2
         x: 32
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d51ee8371d271b270800000000000000
-      internalID: 8264513035114045789
+      spriteID: fd502275ba9d99b70800000000000000
+      internalID: 8906389068026349023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_3
+      name: TreibsandSchach_3
       rect:
         serializedVersion: 2
         x: 48
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36d0048b0695cfd00800000000000000
-      internalID: 1007778688567086435
+      spriteID: 35d7361d973f73ec0800000000000000
+      internalID: -3587130873647760045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_4
+      name: TreibsandSchach_4
       rect:
         serializedVersion: 2
         x: 0
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5f511078b94cc8d0800000000000000
-      internalID: -2824801809765146785
+      spriteID: 49e1eff56be23d470800000000000000
+      internalID: 8418123489315004052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_5
+      name: TreibsandSchach_5
       rect:
         serializedVersion: 2
         x: 16
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cca9f19ad2438deb0800000000000000
-      internalID: -4694945240818148660
+      spriteID: e3430fbaf46b70330800000000000000
+      internalID: 3677108074074616894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_6
+      name: TreibsandSchach_6
       rect:
         serializedVersion: 2
         x: 32
@@ -276,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f0fffbd12a93f340800000000000000
-      internalID: 4896426690097443060
+      spriteID: 1f06288f42f6de820800000000000000
+      internalID: 2949135535576342769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_7
+      name: TreibsandSchach_7
       rect:
         serializedVersion: 2
         x: 48
@@ -297,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eda4c9f8ae675bba0800000000000000
-      internalID: -6073817772635436322
+      spriteID: e6a80ebf91bca7a00800000000000000
+      internalID: 755139199998397038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_8
+      name: TreibsandSchach_8
       rect:
         serializedVersion: 2
         x: 0
@@ -318,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a625785289a4d76f0800000000000000
-      internalID: -685309550965337494
+      spriteID: 92e8719e409297a40800000000000000
+      internalID: 5366365532055899689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_9
+      name: TreibsandSchach_9
       rect:
         serializedVersion: 2
         x: 16
@@ -339,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fdbc2acee6a28730800000000000000
-      internalID: 3999942963582778864
+      spriteID: 567939b59e4a65750800000000000000
+      internalID: 6293398851467581285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_10
+      name: TreibsandSchach_10
       rect:
         serializedVersion: 2
         x: 32
@@ -360,14 +360,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98db153ea8356de10800000000000000
-      internalID: 2222055322138295689
+      spriteID: 5907bde5d918c03a0800000000000000
+      internalID: -6697836032905482091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_11
+      name: TreibsandSchach_11
       rect:
         serializedVersion: 2
         x: 48
@@ -381,14 +381,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7aef01cfb35b80c0800000000000000
-      internalID: -4572468913621702019
+      spriteID: b7fba8c0814717d70800000000000000
+      internalID: 9039133573747752827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_12
+      name: TreibsandSchach_12
       rect:
         serializedVersion: 2
         x: 0
@@ -402,14 +402,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f73b1365ba3bcee0800000000000000
-      internalID: -1239832721684219918
+      spriteID: 6949ba90d2544b400800000000000000
+      internalID: 338971931697714326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_13
+      name: TreibsandSchach_13
       rect:
         serializedVersion: 2
         x: 16
@@ -423,14 +423,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70a86c816e95156b0800000000000000
-      internalID: -5309363640900089337
+      spriteID: 39c3fc876185748e0800000000000000
+      internalID: -1709300680024441709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_14
+      name: TreibsandSchach_14
       rect:
         serializedVersion: 2
         x: 32
@@ -444,8 +444,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 697687ceed90ce4e0800000000000000
-      internalID: -1951173685503563882
+      spriteID: 2e16c673dc98ec590800000000000000
+      internalID: -7652027202364743198
       vertices: []
       indices: 
       edges: []

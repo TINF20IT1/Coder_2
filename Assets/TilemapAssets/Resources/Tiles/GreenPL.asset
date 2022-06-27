@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6e4e4fc705376343a3e65b25d94f0e2, type: 3}
-  m_Name: GreenShit
+  m_Name: GreenPL
   m_EditorClassIdentifier: 
   m_Sprites:
   - {fileID: 3761028216018515288, guid: b5ce5575945a786418bb249830fd909a, type: 3}

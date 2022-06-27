@@ -19,10 +19,17 @@ public class Generator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        try
         {
             var prefab = Resources.Load("TerrainPalette");
             Debug.Log(prefab.GetType());
+
         }
+        catch (System.Exception)
+        {
+            Debug.Log("Lol");
+        }
+        
 
         // Remove static tilemap
         tileMap.ClearAllTiles();

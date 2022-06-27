@@ -9,20 +9,24 @@ public class PlayerController : MonoBehaviour {
     public float jumpForce = 300f;
 
     public PlayerManager.MobileDevice device;    
+    Animator animator;
 
     float horMovement, vertMovement;
     Vector2 curVelocity;
     private Rigidbody2D rb;
     float distToGround;
 
-    bool isJumping, alreadyJumped;
-
+    bool isJumping, alreadyJumped, isWalking, isSliding;
     
     void Start () {
         var collider = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         distToGround = collider.bounds.extents.y;
         Log($"{device.Id}");
+        isJumping = false;
+        isWalking = false;
+        isSliding = false;
     }
 
     void Log(string msg) => Debug.Log($"#{device.Id}# {msg}");
@@ -34,6 +38,18 @@ public class PlayerController : MonoBehaviour {
         horMovement = Input.GetAxis("Horizontal");
         vertMovement = Input.GetAxis("Vertical"); 
         curVelocity = rb.velocity;
+
+        if (Mathf.Abs(horMovement) < 0.01f)
+        {
+            isWalking = false ;
+        }
+        else
+        {
+            isWalking = true ;
+        }
+
+        isJumping = Input.GetAxis("Jump")   < 0.01f ? false : true;
+        isSliding = Input.GetAxis("Crouch") < 0.01f ? false : true;
 
         //var upPressed = Input.GetKey(KeyCode.UpArrow);
         //var spacePressed = Input.GetKey(KeyCode.Space);
@@ -57,6 +73,9 @@ public class PlayerController : MonoBehaviour {
 
     void FixedUpdate()
     {
+        animator.SetBool("isWalking", isWalking);
+        animator.SetBool("isJumping", isJumping);
+        animator.SetBool("isSliding", isSliding);
         if (horMovement != 0)
         {
             rb.velocity = new Vector2(horMovement * movementSpeed * Time.deltaTime * 10, curVelocity.y);

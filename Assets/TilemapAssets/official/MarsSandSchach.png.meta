@@ -1,52 +1,52 @@
 fileFormatVersion: 2
-guid: d0a35e891e270cd4f98073af9d0fc724
+guid: c3fef416d3e7f7d42a1be96955c5b009
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9158004162373964887
-    second: steelSprite_0
+      213: 9055129506541868017
+    second: MarsSandSchach_0
   - first:
-      213: -7827401320344404354
-    second: steelSprite_1
+      213: -6787841134142378416
+    second: MarsSandSchach_1
   - first:
-      213: 8264513035114045789
-    second: steelSprite_2
+      213: 3083833254778174880
+    second: MarsSandSchach_2
   - first:
-      213: 1007778688567086435
-    second: steelSprite_3
+      213: 316672346696139906
+    second: MarsSandSchach_3
   - first:
-      213: -2824801809765146785
-    second: steelSprite_4
+      213: -2875438109707280695
+    second: MarsSandSchach_4
   - first:
-      213: -4694945240818148660
-    second: steelSprite_5
+      213: 464557096770418723
+    second: MarsSandSchach_5
   - first:
-      213: 4896426690097443060
-    second: steelSprite_6
+      213: 6251608568715059597
+    second: MarsSandSchach_6
   - first:
-      213: -6073817772635436322
-    second: steelSprite_7
+      213: 1439238287568270238
+    second: MarsSandSchach_7
   - first:
-      213: -685309550965337494
-    second: steelSprite_8
+      213: -4417483547498529727
+    second: MarsSandSchach_8
   - first:
-      213: 3999942963582778864
-    second: steelSprite_9
+      213: -7903167925606567781
+    second: MarsSandSchach_9
   - first:
-      213: 2222055322138295689
-    second: steelSprite_10
+      213: 7566629525617176425
+    second: MarsSandSchach_10
   - first:
-      213: -4572468913621702019
-    second: steelSprite_11
+      213: -248879938021982408
+    second: MarsSandSchach_11
   - first:
-      213: -1239832721684219918
-    second: steelSprite_12
+      213: 5689283347060490287
+    second: MarsSandSchach_12
   - first:
-      213: -5309363640900089337
-    second: steelSprite_13
+      213: -847129366952909772
+    second: MarsSandSchach_13
   - first:
-      213: -1951173685503563882
-    second: steelSprite_14
+      213: 4130073747367498573
+    second: MarsSandSchach_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: steelSprite_0
+      name: MarsSandSchach_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9aba62a4cbb38e080800000000000000
-      internalID: -9158004162373964887
+      spriteID: 1f316906f484aad70800000000000000
+      internalID: 9055129506541868017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_1
+      name: MarsSandSchach_1
       rect:
         serializedVersion: 2
         x: 16
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7eb27278fb7f5390800000000000000
-      internalID: -7827401320344404354
+      spriteID: 05ea8a7b37ebcc1a0800000000000000
+      internalID: -6787841134142378416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_2
+      name: MarsSandSchach_2
       rect:
         serializedVersion: 2
         x: 32
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d51ee8371d271b270800000000000000
-      internalID: 8264513035114045789
+      spriteID: 0adf691a10afbca20800000000000000
+      internalID: 3083833254778174880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_3
+      name: MarsSandSchach_3
       rect:
         serializedVersion: 2
         x: 48
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36d0048b0695cfd00800000000000000
-      internalID: 1007778688567086435
+      spriteID: 284430f42db056400800000000000000
+      internalID: 316672346696139906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_4
+      name: MarsSandSchach_4
       rect:
         serializedVersion: 2
         x: 0
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5f511078b94cc8d0800000000000000
-      internalID: -2824801809765146785
+      spriteID: 9ced64126446818d0800000000000000
+      internalID: -2875438109707280695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_5
+      name: MarsSandSchach_5
       rect:
         serializedVersion: 2
         x: 16
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cca9f19ad2438deb0800000000000000
-      internalID: -4694945240818148660
+      spriteID: 32833ead730727600800000000000000
+      internalID: 464557096770418723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_6
+      name: MarsSandSchach_6
       rect:
         serializedVersion: 2
         x: 32
@@ -276,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f0fffbd12a93f340800000000000000
-      internalID: 4896426690097443060
+      spriteID: d81ac0deedc22c650800000000000000
+      internalID: 6251608568715059597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_7
+      name: MarsSandSchach_7
       rect:
         serializedVersion: 2
         x: 48
@@ -297,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eda4c9f8ae675bba0800000000000000
-      internalID: -6073817772635436322
+      spriteID: e93f5add89339f310800000000000000
+      internalID: 1439238287568270238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_8
+      name: MarsSandSchach_8
       rect:
         serializedVersion: 2
         x: 0
@@ -318,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a625785289a4d76f0800000000000000
-      internalID: -685309550965337494
+      spriteID: 14cb73e4e12f1b2c0800000000000000
+      internalID: -4417483547498529727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_9
+      name: MarsSandSchach_9
       rect:
         serializedVersion: 2
         x: 16
@@ -339,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fdbc2acee6a28730800000000000000
-      internalID: 3999942963582778864
+      spriteID: b90b5f9f4ae425290800000000000000
+      internalID: -7903167925606567781
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_10
+      name: MarsSandSchach_10
       rect:
         serializedVersion: 2
         x: 32
@@ -360,14 +360,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98db153ea8356de10800000000000000
-      internalID: 2222055322138295689
+      spriteID: 96fe46db671120960800000000000000
+      internalID: 7566629525617176425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_11
+      name: MarsSandSchach_11
       rect:
         serializedVersion: 2
         x: 48
@@ -381,14 +381,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7aef01cfb35b80c0800000000000000
-      internalID: -4572468913621702019
+      spriteID: 83f7a76d30dcb8cf0800000000000000
+      internalID: -248879938021982408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_12
+      name: MarsSandSchach_12
       rect:
         serializedVersion: 2
         x: 0
@@ -402,14 +402,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f73b1365ba3bcee0800000000000000
-      internalID: -1239832721684219918
+      spriteID: f200610af0564fe40800000000000000
+      internalID: 5689283347060490287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_13
+      name: MarsSandSchach_13
       rect:
         serializedVersion: 2
         x: 16
@@ -423,14 +423,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70a86c816e95156b0800000000000000
-      internalID: -5309363640900089337
+      spriteID: 43468fb34546e34f0800000000000000
+      internalID: -847129366952909772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: steelSprite_14
+      name: MarsSandSchach_14
       rect:
         serializedVersion: 2
         x: 32
@@ -444,8 +444,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 697687ceed90ce4e0800000000000000
-      internalID: -1951173685503563882
+      spriteID: d439100f038f05930800000000000000
+      internalID: 4130073747367498573
       vertices: []
       indices: 
       edges: []

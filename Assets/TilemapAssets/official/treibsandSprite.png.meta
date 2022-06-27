@@ -47,9 +47,6 @@ TextureImporter:
   - first:
       213: 842107412290794242
     second: treibsandSprite_14
-  - first:
-      213: -4597883795521066043
-    second: treibsandSprite_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,8 +110,8 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 64
-    resizeAlgorithm: 1
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -125,8 +122,8 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 64
-    resizeAlgorithm: 1
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -449,27 +446,6 @@ TextureImporter:
       bones: []
       spriteID: 203f054da34cfab00800000000000000
       internalID: 842107412290794242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: treibsandSprite_15
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5cb21717c090130c0800000000000000
-      internalID: -4597883795521066043
       vertices: []
       indices: 
       edges: []

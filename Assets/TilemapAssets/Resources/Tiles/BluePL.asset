@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6e4e4fc705376343a3e65b25d94f0e2, type: 3}
-  m_Name: BlueShit
+  m_Name: BluePL
   m_EditorClassIdentifier: 
   m_Sprites:
   - {fileID: 5651865518548577897, guid: 261effa9f754e0c47afe582dfc2fd16a, type: 3}
