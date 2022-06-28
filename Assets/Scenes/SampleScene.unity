@@ -6948,7 +6948,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &956659712
 Rigidbody2D:
   serializedVersion: 4
@@ -7079,7 +7079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1026181522
 Rigidbody2D:
   serializedVersion: 4
@@ -7584,9 +7584,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7389234104349241778, guid: e71c49d515cd82941bfbed179c2d3b68, type: 3}
+      propertyPath: jumpAmount
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7389234104349241779, guid: e71c49d515cd82941bfbed179c2d3b68, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389234104349241779, guid: e71c49d515cd82941bfbed179c2d3b68, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389234104349241779, guid: e71c49d515cd82941bfbed179c2d3b68, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389234104349241779, guid: e71c49d515cd82941bfbed179c2d3b68, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 7389234104349241779, guid: e71c49d515cd82941bfbed179c2d3b68, type: 3}
       propertyPath: m_LocalPosition.x

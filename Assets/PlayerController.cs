@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 
     public float movementSpeed = 3f;
     public float jumpForce = 300f;
+    public float jumpAmount = 10;
 
     public PlayerManager.MobileDevice device;    
     Animator animator;
@@ -51,24 +52,12 @@ public class PlayerController : MonoBehaviour {
         isJumping = Input.GetAxis("Jump")   < 0.01f ? false : true;
         isSliding = Input.GetAxis("Crouch") < 0.01f ? false : true;
 
-        //var upPressed = Input.GetKey(KeyCode.UpArrow);
-        //var spacePressed = Input.GetKey(KeyCode.Space);
-
-        //Log($"{upPressed} {spacePressed} {isGrounded()}");
-
-        //var mov = new Vector2(0, 0);
-
-        //if ((upPressed || spacePressed) && isGrounded())
-        //{
-        //    Log("Jump");
-        //    mov.y = jumpSpeed;
-        //}
-
-        //mov.x = movementSpeed * Input.GetAxis("Horizontal");
-
-
-        //Log(mov);
-        //rb.AddForce(mov);
+        if (Input.GetAxisRaw("Jump") == 1 && isGrounded() && !isJumping)
+        {
+            isJumping = true;
+            rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Force);
+            Debug.Log("NO!");
+        }
     }
 
     void FixedUpdate()
@@ -76,9 +65,31 @@ public class PlayerController : MonoBehaviour {
         animator.SetBool("isWalking", isWalking);
         animator.SetBool("isJumping", isJumping);
         animator.SetBool("isSliding", isSliding);
+        if (isJumping && isGrounded())
+            isJumping = !isJumping;
         if (horMovement != 0)
         {
             rb.velocity = new Vector2(horMovement * movementSpeed * Time.deltaTime * 10, curVelocity.y);
         }    
     }
 }
+
+
+//var upPressed = Input.GetKey(KeyCode.UpArrow);
+//var spacePressed = Input.GetKey(KeyCode.Space);
+
+//Log($"{upPressed} {spacePressed} {isGrounded()}");
+
+//var mov = new Vector2(0, 0);
+
+//if ((upPressed || spacePressed) && isGrounded())
+//{
+//    Log("Jump");
+//    mov.y = jumpSpeed;
+//}
+
+//mov.x = movementSpeed * Input.GetAxis("Horizontal");
+
+
+//Log(mov);
+//rb.AddForce(mov);

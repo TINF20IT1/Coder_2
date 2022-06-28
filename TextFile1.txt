@@ -1,0 +1,75 @@
+// Make an empty level, and add a start and end platform.
+
+Level = EmptyLevel();
+
+Level.AddBlock(StartBlock);
+
+Level.AddBlock(FinalBlock);
+
+// Create a feasible path between the start and end platform.
+
+CompleteLevel(Level);
+
+// Recursive method to take an incomplete level and make it feasible by adding more blocks.
+
+bool CompleteLevel(Level)
+
+{
+
+// We will keep track of blocks we tried which turned out invalid.
+
+ListOfBlocksTried = { };
+
+// Keep trying different blocks until we find one that is valid.
+
+// If we try too many blocks, perhaps the current level can not be made feasible, so return to the parent node.
+
+while (ListOfBlocksTried.Length < 10)
+
+{
+
+// Choose a block to try and add it to the level.
+
+NewBlock = Heuristic(Level, ListOfBlocksTried);
+
+Level.AddBlock(NewBlock);
+
+// Check to see if we can reach the new block.
+
+if (PlayerAI.BlockIsReachable(Level, StartPos, NewBlock))
+
+{
+
+// If we can reach the exit platform, we are done
+
+if (PlayerAI.BlockIsReachable(Level, StartPos, FinalBlock))
+
+return true;
+
+else
+
+{
+
+// Otherwise, recursively proceed down the tree. If the recursive call returns true, then our new blocks is a good choice.
+
+if (CompleteLevel(Level)
+
+return true;
+
+}
+
+}
+
+// Either the new block wasn't reachable, or it led to a level that couldn't be made feasible with additional blocks.
+
+// Either way, remove the new block and add it to our list of used blocks, so we don't use it again.
+
+ListOfBlocksTried.Append(NewBlock);
+
+Level.RemoveBlock(NewBlock);
+
+}
+
+return false;
+
+} 

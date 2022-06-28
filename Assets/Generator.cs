@@ -1,7 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+
+class RectMap
+{
+    int[,] map { set; get; }
+    public RectMap(int[,] map)
+    {
+        this.map = map;
+    }
+
+    public void DrawRect(
+        int startPosx, int startPosy, int dimensionsx, int dimensionsy)
+    {
+        for (int x = startPosx; x < startPosx + dimensionsx; x++)
+            for (int y = startPosy; y < startPosy + dimensionsy; y++)
+                map[x, y] = 1;
+    }
+}
 
 public class Generator : MonoBehaviour
 {
@@ -9,28 +27,36 @@ public class Generator : MonoBehaviour
     public TileBase tile, debug, interactable;
 
     public float seed;
-     
+    
+    private TileBase[] Tiles;
+
     Vector3Int cellPos, nextCellPos = new Vector3Int(-100, -100, -100);
     Vector2Int offset;
 
-    int width, height;
+    int width, height, start;
     GridMap map;
+
+    private void Awake()
+    {
+        Tiles = new string[] 
+            {
+                "BluePL", "GreenPL", "Marssand",
+                "Marssandschach", "Steel", "Treibsand",
+                "Treibsandschach"
+            }
+            .Select(x => Resources.Load<TileBase>($"Tiles/{x}")).ToArray();
+        foreach (var item in Tiles)
+        {
+            Debug.Log(item.GetType());
+        }
+        Debug.Log(Tiles.Length);
+    }
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        try
-        {
-            var prefab = Resources.Load("TerrainPalette");
-            Debug.Log(prefab.GetType());
-
-        }
-        catch (System.Exception)
-        {
-            Debug.Log("Lol");
-        }
-        
-
         // Remove static tilemap
         tileMap.ClearAllTiles();
 
@@ -52,23 +78,55 @@ public class Generator : MonoBehaviour
 
         Debug.Log($"h: {height}+{offset.y} w: {width}+{offset.x}");
 
+        start = height / 2;
+
+        #region Gen
+
         GridMap.MapMutator perlinGenerate = (map, offset) =>
         {
-                int newPoint;
-                for (int x = 0; x < map.GetUpperBound(0); x++)
+            int newPoint;
+
+            for (int x = 0; x < map.GetUpperBound(0); x++)
+            {
+                var input = x * 0.1f;
+                //Debug.Log($"{Mathf.PerlinNoise(input, seed)} <- {x}, {seed}");
+                newPoint =
+                    Mathf.FloorToInt((Mathf.PerlinNoise(input, seed))
+                        * map.GetUpperBound(1));
+                //Debug.Log(newPoint);
+                newPoint /= 4;
+                for (int y = newPoint; y >= 0; y--)
                 {
-                    var input = x * 0.1f;
-                    //Debug.Log($"{Mathf.PerlinNoise(input, seed)} <- {x}, {seed}");
-                    newPoint = Mathf.FloorToInt((Mathf.PerlinNoise(input, seed)) * map.GetUpperBound(1));
-                    //Debug.Log(newPoint);
-                    newPoint /= 4;
-                    for (int y = newPoint; y >= 0; y--)
-                    {
-                        map[x, y] = 1;
-                    }
+                    map[x, y] = 1;
                 }
-                return map;
+            }
+            return map;
         };
+
+        GridMap.MapMutator terrainGenerate = (map, offset) =>
+        {
+            // map is an empty chunk; add a start and end platform.
+            var mmap = new RectMap(map);
+
+            // set start platform
+            mmap.DrawRect(0, 0, 2, start);
+
+            // vary start and end pos
+            var stepUp = Random.Range(-3, 3);
+            if (start + stepUp > (height * 3 / 4))
+                start = (height * 3 / 4);
+            else if (start + stepUp < (height * 1 / 4))
+                start = (height * 1 / 4);
+            else
+                start += stepUp;
+
+            // set end platform
+            mmap.DrawRect(0,0, 2, start);
+
+            return map;
+        };
+
+        #endregion Gen
 
         map = new GridMap(
             width,
@@ -87,8 +145,6 @@ public class Generator : MonoBehaviour
         //RenderMap(map, tileMap, tile);
     }
 
-    
-
     // Update is called once per frame
     void Update()
     {
@@ -105,49 +161,12 @@ public class Generator : MonoBehaviour
         {
             nextCellPos.x += width;
             offset.x += width - 1;
-            map.UpdateRender(tileMap, tile, offset);
+            map.UpdateRender(tileMap, Tiles[Random.Range(0,Tiles.Length)], offset);
             tileMap.SetTile(cellPos, debug);
         }
 
-
-            /*
-        if (cellPos != prevCellPos)
-        {
-            prevCellPos = cellPos;
-            //Debug.Log("" + camPos + ' ' + cellPos);
-            tileMap.SetTile(cellPos, debug);
-        }
-            */
-
-
-    }
-    /*
-    public int[,] GenerateArray(int width, int height, bool empty)
-    {
-        int[,] array = new int[width, height];
-        for (int i = 0; i < width; i++)
-            for (int j = 0; j < height; j++)
-                array[i, j] = empty ? 0 : 1;
-        return array;
-    }*/
-    /*
-    public void RenderMap(int[,] map, Tilemap tilemap, TileBase tile)
-    {
-        tilemap.ClearAllTiles();
-        for (int x = 0; x < map.GetUpperBound(0); x++)
-            for (int y = 0; y < map.GetUpperBound(1); y++)
-                if (map[x, y] == 1)
-                    tilemap.SetTile(new Vector3Int(x + offsetX, y + offsetY, 0), tile);
     }
 
-    public void UpdateMap(int[,] map, Tilemap tilemap)
-    {
-        for (int x = 0; x < map.GetUpperBound(0); x++)
-            for (int y = 0; y < map.GetUpperBound(1); y++)
-                if (map[x, y] == 0)
-                    tilemap.SetTile(new Vector3Int(x + offsetX, y + offsetY, 0), null);
-    }
-    */
     public Vector3 camGetHelper(Camera camera, float x, float y)
     {
         var camPos = Camera.main.transform.position;
