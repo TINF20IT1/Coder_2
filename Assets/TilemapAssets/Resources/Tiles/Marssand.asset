@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e4e4fc705376343a3e65b25d94f0e2, type: 3}
+  m_Name: Marssand
+  m_EditorClassIdentifier: 
+  m_Sprites:
+  - {fileID: -4979559782825090051, guid: c468d969419528f4699ba60981d514fc, type: 3}
+  - {fileID: 6026989867855423077, guid: c468d969419528f4699ba60981d514fc, type: 3}
+  - {fileID: 7084015776104565783, guid: c468d969419528f4699ba60981d514fc, type: 3}
+  - {fileID: 5642533419970093515, guid: c468d969419528f4699ba60981d514fc, type: 3}
+  - {fileID: -2240241115919501205, guid: c468d969419528f4699ba60981d514fc, type: 3}
+  - {fileID: -5878040908981445995, guid: c468d969419528f4699ba60981d514fc, type: 3}
+  - {fileID: 3092145642890598478, guid: c468d969419528f4699ba60981d514fc, type: 3}
+  - {fileID: 7820764053730292535, guid: c468d969419528f4699ba60981d514fc, type: 3}
+  - {fileID: -1490012407975959900, guid: c468d969419528f4699ba60981d514fc, type: 3}
+  - {fileID: 4710015635501310074, guid: c468d969419528f4699ba60981d514fc, type: 3}
+  - {fileID: 7371986910315855223, guid: c468d969419528f4699ba60981d514fc, type: 3}
+  - {fileID: -6807860659162189864, guid: c468d969419528f4699ba60981d514fc, type: 3}
+  - {fileID: 3539069351762221440, guid: c468d969419528f4699ba60981d514fc, type: 3}
+  - {fileID: 1916223803401117978, guid: c468d969419528f4699ba60981d514fc, type: 3}
+  - {fileID: 6026989867855423077, guid: c468d969419528f4699ba60981d514fc, type: 3}

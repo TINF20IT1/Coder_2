@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e4e4fc705376343a3e65b25d94f0e2, type: 3}
+  m_Name: Marssandschach
+  m_EditorClassIdentifier: 
+  m_Sprites:
+  - {fileID: 9055129506541868017, guid: c3fef416d3e7f7d42a1be96955c5b009, type: 3}
+  - {fileID: -6787841134142378416, guid: c3fef416d3e7f7d42a1be96955c5b009, type: 3}
+  - {fileID: 3083833254778174880, guid: c3fef416d3e7f7d42a1be96955c5b009, type: 3}
+  - {fileID: 316672346696139906, guid: c3fef416d3e7f7d42a1be96955c5b009, type: 3}
+  - {fileID: -2875438109707280695, guid: c3fef416d3e7f7d42a1be96955c5b009, type: 3}
+  - {fileID: 464557096770418723, guid: c3fef416d3e7f7d42a1be96955c5b009, type: 3}
+  - {fileID: 6251608568715059597, guid: c3fef416d3e7f7d42a1be96955c5b009, type: 3}
+  - {fileID: 1439238287568270238, guid: c3fef416d3e7f7d42a1be96955c5b009, type: 3}
+  - {fileID: -4417483547498529727, guid: c3fef416d3e7f7d42a1be96955c5b009, type: 3}
+  - {fileID: -7903167925606567781, guid: c3fef416d3e7f7d42a1be96955c5b009, type: 3}
+  - {fileID: 7566629525617176425, guid: c3fef416d3e7f7d42a1be96955c5b009, type: 3}
+  - {fileID: -248879938021982408, guid: c3fef416d3e7f7d42a1be96955c5b009, type: 3}
+  - {fileID: 5689283347060490287, guid: c3fef416d3e7f7d42a1be96955c5b009, type: 3}
+  - {fileID: -847129366952909772, guid: c3fef416d3e7f7d42a1be96955c5b009, type: 3}
+  - {fileID: 4130073747367498573, guid: c3fef416d3e7f7d42a1be96955c5b009, type: 3}
